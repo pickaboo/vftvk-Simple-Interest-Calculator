@@ -1,9 +1,10 @@
 function compute() {
-    p = 0; r = 0; y = 0;
+
     p = document.getElementById("principal").value;
     r = document.getElementById("rate").value;
     y = document.getElementById("years").value;
-    document.getElementById("result").innerText = (calc(p, r, y));
+    sum = calc(p, r, y);
+    document.getElementById("result").innerText = sum;
 }
 
 function calc(p, r, y) {
