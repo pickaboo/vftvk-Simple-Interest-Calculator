@@ -1,8 +1,16 @@
 body {
-  background-color: aliceblue;
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 h1 {
-  color: darkslategrey;
+  color: darkgray;
+}
+
+table {
+  color: black;
+  width: 100%;
 }
 
 .centered {
@@ -11,4 +19,21 @@ h1 {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
+}
+
+.card {
+  background-color: white;
+  color: black;
+  padding: 50px;
+  border-radius: 50px;
+  width: 40%;
+}
+
+.card-body {
+  padding-right: 80;
+  padding-left: 80;
+}
+
+.form-label {
+  width: 80px;
 }

@@ -1,45 +1,71 @@
 <html>
 
 <head>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container ">
-        <div class="card w-25 centered">
+    <div class="container">
+        <div class="card centered">
             <div class="card-header">
                 <h1 class="center">Simple Interest Calculator</h1>
             </div>
             <div class="card-body">
-                <div>
-                    <div class="mb-3">
-                        <label class="form-label">Amount</label>
-                        <input type="number" class="form-control" id="principal">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Rate in %</label>
-                        <input type="number" class="form-control" id="rate">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">No. of Years</label>
-                        <input type="number" class="form-control" id="years">
-                    </div>
-                    <button onclick="compute()" class="btn btn-primary">Submit</button>
-                    <br><br>
+                <table>
+                    <tr>
+                        <td>
+                            <label class="form-label">Amount</label>
+                        </td>
+                        <td>
+                            <input type="number" class="form-control" id="principal">
+                        </td>
+                    </tr>
 
-                    <h3>Result: <section id="result">-</section>
-                    </h3>
-                </div>
+                    <tr>
+                        <td>
+                            <label class="form-label">Rate in %</label>
+                        </td>
+                        <td>
+                            <input type="range" min="1" max="100" value="50" class="slider" id="rate">
+                        </td>
+                        <td>
+                            <p>
+                                <label id="rateout"></label>%
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="line">
+                            <label class="form-label">No. of Years</label>
+                        </td>
+                        <td>
+                            <select id="years" name="years">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    </ul>
+                </table>
+                <br>
+                <button onclick="compute()">Compute Interest</button>
+
+                <br><br>
+                <div id="am"></div>
+                <div id="ir"></div>
+                <div id="sm"></div>
+                <div id="iy"></div>
             </div>
+            <h4>© Everyone Can Get Rich</h4>
         </div>
-    </div>
 
+        <script src="script.js"></script>
 
 </body>
+
 
 </html>
